@@ -1,0 +1,46 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Usuario.master.cs" Inherits="RentACar.Usuario" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+             <div class='container'>
+                <a href="http://localhost:44155/Encomiendas/registro.html">
+                    <div class="box" style="background-color: #C70D3A">
+                        <div class="icon"> <i  class="fas fa-user" aria-hidden="true"></i></div>
+
+                            <h3>Gestionar Clientes</h3>
+                    </div>
+                </a>
+                <a href="http://localhost:44155/Encomiendas/ordenes.html">
+                    <div class="box" style="background-color: #50D890">
+                        <div class="icon"> <i  class="fas fa-shipping-fast" aria-hidden="true"></i></div>
+                        <div class="content">
+                            <h3>Tramitar Órdenes</h3>
+                        </div>
+                    </div>
+                </a>  
+                <a href="http://localhost:44155/Encomiendas/gestionOrden.html">
+                    <div class="box"  style="background-color: #185ADB">
+                        <div class="icon"> <i class="fas fa-tasks" aria-hidden="true"></i></div>
+                        <div class="content">
+                            <h3>Gestionar Órdenes</h3>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

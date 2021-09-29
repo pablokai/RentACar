@@ -1,0 +1,152 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="RentACar.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - My ASP.NET Application</title>
+        <script src="https://kit.fontawesome.com/7adeb3fe3b.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Content/dashboard.css" />
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+
+    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+</head>
+<body style="background-color: #f3f7fe;">
+    <form runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                <%--Framework Scripts--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="bootstrap" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <%--Site Scripts--%>
+            </Scripts>
+        </asp:ScriptManager>
+
+  <%--      <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" runat="server" href="~/">Application name</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a runat="server" href="~/">Home</a></li>
+                        <li><a runat="server" href="~/About">About</a></li>
+                        <li><a runat="server" href="~/Contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>--%>
+
+
+        <div id="wrapper">
+           <%-- <div class="navbar navbar-default" style="background-color: transparent; margin-top:0px; float:right !important">
+            </div>--%>
+            <div id="sidebar-wrapper">
+                <ul class="sidebar-nav">
+                    <li class="sidebar-brand">
+                        <a  href="../Pages/Default.aspx" style="font-size:22px;margin-right: 40px;color:#fff">
+                            <img src="../Images/rent-a-car.png" width="60" height="60" style="margin-right: 10px;" />
+                              Rent A Car                          
+                        </a>
+                    </li>
+                    <li>
+                        <img src="../Images/substract.svg" width="200" height="25" alt="linea" />
+                    </li>
+                    <li>
+                        <a href="../Pages/InsertarVehiculo.aspx"><i class="fas fa-plus-circle fa-lg" style="margin-right: 14px"></i>
+                            Insertar vehículo</a>
+                    </li>
+                    <li>
+                        <a href="../Pages/ModificarVehiculo.aspx"><i class="fas fa-edit fa-lg" style="margin-right: 14px"></i>
+                            Modificar vehículo</a>
+                    </li>
+                    <li>
+                        <a href="../Pages/EliminarVehiculo.aspx"><i class="fas fa-trash fa-lg" style="margin-right: 14px"></i>
+                            Eliminar vehículo
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../Pages/ConsultarVehiculo.aspx"><i class="fas fa-search fa-lg" style="margin-right: 14px"></i>
+                           Consultar vehículo
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../Pages/Modelo.aspx"><i class="fas fa-car fa-lg" style="margin-right: 14px"></i>
+                            Gestión de Modelo
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../Pages/Marca.aspx"><i class="fas fa-copyright fa-lg" style="margin-right: 14px"></i>
+                            Gestión de Marca
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../Pages/Color.aspx"><i class="fas fa-palette fa-lg" style="margin-right: 14px"></i>
+                            Gestión de Color
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../Pages/Combustible.aspx"><i class="fas fa-gas-pump fa-lg" style="margin-right: 14px"></i>
+                            Gestión de Combustible
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../Pages/Tipo.aspx"><i class="fas fa-filter fa-lg" style="margin-right: 14px"></i>
+                            Gestión de Tipo 
+                        </a>
+                    </li>
+
+
+                     <li>
+                        <a href="../Pages/MontoRecaudado.aspx"><i class="fas fa-search-dollar fa-lg" style="margin-right: 14px"></i>
+                            Recaudado por día
+                        </a>
+                    </li>
+ 
+                  
+                </ul>
+
+
+            </div>
+        </div>
+
+        <asp:Button ID="btnSalir" runat="server" Text="Salir" CssClass="butn" ForeColor="White" BackColor="#FF004D" BorderColor="#FF004D" Height="20px" OnClick="btnSalir_Click" Width="100px" />
+                    
+        <div class="container body-content" style="padding-left: 90px;">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+            <hr />
+           
+        </div>
+
+    </form>
+</body>
+</html>
